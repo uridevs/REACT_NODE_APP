@@ -1,1 +1,4 @@
 node_modules/
+
+# Ignore dotenv environment variables file
+.env
