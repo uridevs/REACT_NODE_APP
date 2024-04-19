@@ -1,6 +1,7 @@
 import express from "express";
 import mysql from "mysql";
 import 'dotenv/config';
+import cors from "cors";
 
 
 const port = process.env.PORT;
@@ -8,6 +9,7 @@ const db_user = process.env.DB_USER
 const db_pwd = process.env.DB_PASSWORD
 
 const app = express();
+app.use(cors());
 
 const db = mysql.createConnection({
     host:"localhost",
